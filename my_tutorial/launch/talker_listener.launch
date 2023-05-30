@@ -1,0 +1,9 @@
+<launch>
+  <!-- python 버전 -->
+  <node name="listener" pkg="my_tutorial" type="listener.py" output="screen"/>
+  <node name="talker" pkg="my_tutorial" type="talker.py" output="screen"/>
+  
+  <!-- c++ 버전 -->
+  <node name="listener_cpp" pkg="my_tutorial" type="listener_cpp" output="screen"/>
+  <node name="talker_cpp" pkg="my_tutorial" type="talker_cpp" output="screen"/>
+</launch>
