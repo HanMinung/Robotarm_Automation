@@ -48,15 +48,17 @@
 
 * Camera sensor : Microsoft LifeCam studio (EA : 1)
 
-  ​                                                                                                                   <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/46e48473-871e-4a21-b48a-83dbf2068b71" alt="Screenshot from 2023-06-05 20-33-48" style="zoom: 33%;" />                
+  ​                                                                                                                   ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/9c5f9a88-9409-4055-b848-30666be7ace6)                
 
 * Arduino sensor : RGB led (EA : 1), 4-bit LED Digital Tube module (EA : 1)
 
-  ​                                                                                <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/15a9d593-6fa2-4c6e-8bfc-d501e32e403f" alt="Screenshot from 2023-06-05 20-35-58" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/b25cd244-87dc-4f11-88ae-5570f06dc4cd" alt="Screenshot from 2023-06-05 20-36-23" style="zoom:40%;" />
+  ​                                                               
+
+  ​                                                                                             ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/ea5a3fdd-3ead-4670-903d-a0947071c48e)![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/df4b016c-b9c1-4e0e-970b-ea4ce87a1ae8)
 
 * robot arm : Indy 10 
 
-  ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/d240009f-9a58-4707-b390-02d0c963511e)
+  <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/7c1f0146-189a-4711-8be0-11359e6c87a4" alt="image" style="zoom:80%;" />
 
   * Specifications of Indy 10 robot
 
@@ -73,13 +75,13 @@
 
   A part needs to be designed to be attached to the bracket provided with the default in the end effector. The corresponding part has been 3D printed, and here are the design details and the actual form of the attached part.
 
-  ​                           <img src="https://github.com/HanMinung/EmbeddedController/assets/99113269/9d0230c2-9a5f-44e6-bc0c-eff2d6f68ec1" alt="IMG-0515" style="zoom:45%;" />  <img src="https://github.com/HanMinung/EmbeddedController/assets/99113269/274b0c87-cc8e-4733-90e8-048247a867f4" alt="hardware2" style="zoom: 10%;" />
+  ​                                                                                    <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/01dd15e5-9181-4796-adc7-e00c8dec131d" alt="image" style="zoom: 80%;" />  <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/e67b4287-9abd-4c61-a984-cab0cc5cb53d" alt="image" style="zoom:80%;" />
 
 
 
 * Shoes cabinet (EA : 1)
 
-  <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/a07b0bb2-8ad3-4cd1-9be2-f4f687415fea" alt="image" style="zoom:75%;" />
+  ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/4ccdc931-744c-4c45-b8f5-2083e85f9418)
 
 
 
@@ -249,7 +251,7 @@ Since the recognition of objects (shoes) in a fixed and static environment was t
 
 Taking into account the camera's installation angle and field of view, it is necessary to prevent incorrect recognition of objects in areas other than the region of interest. Setting a region of interest (ROI) can be one approach, but considering that the training images primarily captured shoes from a top-down angle, applying a different technique such as inverse perspective mapping was deemed necessary. OpenCV provides functions for this purpose, and inverse perspective mapping is commonly used to obtain a bird's eye view. By applying this technique, the camera's perspective was transformed. Using the model generated through `3.5. Deep learning model generation`, recognition was conducted with the following results.
 
-​                <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/2a16f512-ace6-4d15-85fa-71a5a613dc52" alt="Screenshot from 2023-06-12 19-08-05" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/aed48830-81c4-4dab-871c-a150b8a470a6" alt="Screenshot from 2023-06-12 19-03-46" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/7a1dc897-e0aa-49ad-8e32-e6a44afa8262" alt="Screenshot from 2023-06-12 19-05-20" style="zoom:50%;" />
+​                                      ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/e11d3625-038d-4095-a9f8-0ecdf63b9cdc)
 
 
 
