@@ -241,23 +241,8 @@ Train the model by specifying the batch size and number of epochs, matching the 
 
 
 
+## - Reference
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-reference
 https://jjeongil.tistory.com/2066
 
 https://ingu627.github.io/tips/install_cuda_linux/

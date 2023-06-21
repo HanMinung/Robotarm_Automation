@@ -48,15 +48,15 @@
 
 * Camera sensor : Microsoft LifeCam studio (EA : 1)
 
-  ​                                                                                                                   <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/46e48473-871e-4a21-b48a-83dbf2068b71" alt="Screenshot from 2023-06-05 20-33-48" style="zoom: 33%;" />                
+  ​                <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/46e48473-871e-4a21-b48a-83dbf2068b71" alt="Screenshot from 2023-06-05 20-33-48" style="zoom: 33%;" />                
 
 * Arduino sensor : RGB led (EA : 1), 4-bit LED Digital Tube module (EA : 1)
 
-  ​                                                                                <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/15a9d593-6fa2-4c6e-8bfc-d501e32e403f" alt="Screenshot from 2023-06-05 20-35-58" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/b25cd244-87dc-4f11-88ae-5570f06dc4cd" alt="Screenshot from 2023-06-05 20-36-23" style="zoom:40%;" />
+   <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/83cc80a5-be26-496d-84ef-135567a0e302" alt="image" style="zoom:67%;" />
 
 * robot arm : Indy 10 
 
-  ![image](https://github.com/HanMinung/NumericalProgramming/assets/99113269/d240009f-9a58-4707-b390-02d0c963511e)
+  <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/4a123df9-b41f-4323-99a8-0343cce49455" alt="image" style="zoom: 50%;" />
 
   * Specifications of Indy 10 robot
 
@@ -107,6 +107,8 @@
 ​			Description of the implementation components (detailed description of above flow chart)and communication structure of the system is as follows.
 
 <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/141c3080-d341-4ab4-81b3-7d9bcf78c8e5" alt="codeDiagram drawio (1)" style="zoom: 80%;" />
+
+
 
 * **Implementation components**
 
@@ -249,7 +251,7 @@ Since the recognition of objects (shoes) in a fixed and static environment was t
 
 Taking into account the camera's installation angle and field of view, it is necessary to prevent incorrect recognition of objects in areas other than the region of interest. Setting a region of interest (ROI) can be one approach, but considering that the training images primarily captured shoes from a top-down angle, applying a different technique such as inverse perspective mapping was deemed necessary. OpenCV provides functions for this purpose, and inverse perspective mapping is commonly used to obtain a bird's eye view. By applying this technique, the camera's perspective was transformed. Using the model generated through `3.5. Deep learning model generation`, recognition was conducted with the following results.
 
-​                <img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/2a16f512-ace6-4d15-85fa-71a5a613dc52" alt="Screenshot from 2023-06-12 19-08-05" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/aed48830-81c4-4dab-871c-a150b8a470a6" alt="Screenshot from 2023-06-12 19-03-46" style="zoom:50%;" /><img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/7a1dc897-e0aa-49ad-8e32-e6a44afa8262" alt="Screenshot from 2023-06-12 19-05-20" style="zoom:50%;" />
+<img src="https://github.com/HanMinung/NumericalProgramming/assets/99113269/f34c18ce-738a-4c68-9d58-2d80f24b79f5" alt="image"  />
 
 
 
