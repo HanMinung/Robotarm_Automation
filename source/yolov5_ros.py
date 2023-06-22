@@ -43,6 +43,7 @@ from utils.dataloaders import letterbox
 @torch.no_grad()
 class Yolov5Detector:
     # initial value
+    shoe_detect         = False
     num_shoes           = 0
     shoes_frame         = 0
     frame_continue      = 0
@@ -240,9 +241,23 @@ class Yolov5Detector:
                 self.workdoneFlag = False
                     
 
-        cv2.putText(im0, f"SHOES:  {self.num_shoes:5}", (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
-        cv2.putText(im0, f"SHOE_FRAME:  {self.shoes_frame:5}", (30, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
-        cv2.putText(im0, f"NOT DETECTED:  {self.frame_continue:5}", (30, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+
+        background_color = (255, 255, 255)  # 흰색
+        # 흰색 사각형 그리기
+        cv2.rectangle(im0, (0, 0), (320, 150), background_color, -1)
+
+        # 신발 유무 text로 표현
+        if self.num_shoes == 0:
+            self.shoe_detect = 'OFF'
+            color = (0,0,255)
+        else:
+            self.shoe_detect = 'ON'
+            color = (0,255,0)
+
+        cv2.putText(im0, f"SHOES:  ", (15, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv2.putText(im0, f"{self.shoe_detect:>17}",(15, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
+        cv2.putText(im0, f"SHOE FRAME:  {self.shoes_frame:>3}", (15, 85), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv2.putText(im0, f"NOT DETECTED:  {self.frame_continue:>1}", (15, 135), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
         
         # Stream results
         im0 = annotator.result()
@@ -255,6 +270,7 @@ class Yolov5Detector:
             if platform.system() == 'Linux':
                     cv2.namedWindow(str("camera"), cv2.WINDOW_NORMAL | cv2.WINDOW_KEEPRATIO)  # allow window resize (Linux)
                     cv2.resizeWindow(str("camera"), im0.shape[1], im0.shape[0])
+
             cv2.imshow(str("camera"), im0)
             cv2.waitKey(1)  # 1 millisecond
         if self.publish_image:
