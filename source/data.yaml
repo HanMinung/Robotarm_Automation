@@ -1,0 +1,13 @@
+train: /home/tk032/catkin_ws/src/yolov5/Slippers/train/images
+val: /home/tk032/catkin_ws/src/yolov5/Slippers/valid/images
+
+
+nc: 1
+names: ['Slippers']
+
+roboflow:
+  workspace: aiai-ofwua
+  project: slippers-byxcl
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aiai-ofwua/slippers-byxcl/dataset/1

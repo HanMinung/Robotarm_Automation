@@ -26,7 +26,11 @@
 
   
 
-  * python code : main files to run project software
+  * python main code : main files to run project software
+
+    
+
+  * python deep learning code : code for object detection
 
     
 
