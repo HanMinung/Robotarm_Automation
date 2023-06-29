@@ -18,19 +18,47 @@
 
 ## 1. Operation environment
 
-python		3.9
+python	 :     3.9
 
-CUDA 		 11.3.1
+CUDA 	  :     11.3.1
 
-cuDNN 	   8.2.1
+cuDNN 	:     8.2.1
 
-pyTorch      1.12.1
+pyTorch    :     1.12.1
 
-detailed environment setting is specified in other md file : **project description.md**
+detailed environment setting is specified in other md file : **project description.md** (link : [click here to view](https://github.com/HanMinung/Robotarm_Automation/blob/main/md%20files/project%20description.md))
 
 
 
-## 2. Robot speed control
+## 2. Pre-work
+
+​			All the packages and codes constructed while conducting the project were managed in catkin_ws path. Therefore, basic settings for catkin_ws are essential first. After that, it will be explained step by step on how to insert the packages. 
+
+* First, go to the following link (industrial AI automation: automation part github) and download the Github material as a zip file, as shown in the figure below. 
+
+  link : [click here to go to github](https://github.com/hyKangHGU/Industrial-AI-Automation_HGU)
+
+  <img src="https://github.com/HanMinung/DLIP/assets/99113269/24bc197d-fb8a-40d6-822f-8ae862d4f597" alt="image" style="zoom:67%;" />
+
+* Next, in the Ubuntu environment, the home-catkin-ws path is created by default. In that path, there is a folder called `'src'` in catkin_ws. If users copy and paste the downloaded file into that path as shown below, the basic setting is completed.
+
+  <img src="https://github.com/HanMinung/DLIP/assets/99113269/7fc7929e-e8cb-41f2-b6f1-258bc61a3447" alt="image" style="zoom: 67%;" />
+
+* The compressed file contains various configuration files for operating the indy10 and ur5e robots, so the user can freely construct and operate the code for the project. If you've pasted the file correctly as shown in the figure below, you need to open the terminal window by pressing `ctrl+alt+t` and save the changes by entering the following commands and doing catkin_make.
+
+  ```bash
+  # setting path
+  cd catkin_ws
+  
+  # build
+  catkin_make
+  ```
+
+  
+
+
+
+## 3. Robot speed control
 
 ​			To adjust the driving speed of the robot, user needs to execute the `set_velocity.py` Python file in the terminal first. To set the speed limit for the  robot's movement, following parameters need to modified within the code:
 
@@ -84,9 +112,9 @@ cd catkin_ws/src/indy_utils
 chmod +x set_velocity.py
 ```
 
-## 
 
-## 3. File download & implementation
+
+## 4. File download & implementation
 
 download link : [click here to download](https://github.com/HanMinung/Robotarm_Automation)
 
@@ -147,7 +175,7 @@ camera.py modification
 
 Check your webcam device number
 
-```
+```bash
 ls -ltr /dev/video*
 ```
 
@@ -161,7 +189,7 @@ Enter the confirmed number in camera.py
 
 
 
-## 4. yolov5_ros.py modification
+## 5. yolov5_ros.py modification
 
 [![image](https://user-images.githubusercontent.com/99113269/247138596-c7178007-f5ec-44ff-9fb2-e182df793b04.png)](https://user-images.githubusercontent.com/99113269/247138596-c7178007-f5ec-44ff-9fb2-e182df793b04.png)
 
@@ -175,13 +203,13 @@ Change the path of data to the path where you have downloaded the `data.yaml` fi
 
 
 
-## 5. Code implementation
+## 6. Code implementation
 
 Prepare five terminals and enter the following commands in each of them.
 
 - Terminal 1
 
-```
+```bash
 # setting path
 cd catkin_ws/src/indy_utils
 
@@ -191,7 +219,7 @@ python3.9 set_velocity.py
 
 - Terminal 2
 
-```
+```bash
 # setting path
 cd catkin_ws
 
@@ -202,7 +230,7 @@ roslaunch indy10_moveit_config moveit_planning_execution.launch robot_ip:=192.16
 
 - Terminal 3
 
-```
+```bash
 # setting path
 cd catkin_ws
 
@@ -213,7 +241,7 @@ rosrun indy_driver camera.py
 
 - Terminal 4
 
-```
+```bash
 # setting path
 cd catkin_ws
 
@@ -224,7 +252,7 @@ rosrun indy_driver projectRobotactual.py
 
 - Terminal 5
 
-```
+```bash
 # setting path
 cd catkin_ws
 
@@ -243,7 +271,7 @@ All the steps mentioned above can be managed together  using a bash shell script
 
 
 
-### 5.1. Implementation sequence
+### 6.1. Implementation sequence
 
 **[Caution]**
 
